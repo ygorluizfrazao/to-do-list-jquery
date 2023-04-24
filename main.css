@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
 @import "button.css";
 @import "card.css";
 
@@ -45,14 +45,14 @@
 }
 
 h1 {
-    font-weight: bold;
-    font-size: 32px;
-    text-shadow: var(--text-shadow);
-    font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 32px;
+  text-shadow: var(--text-shadow);
+  font-family: "Courier New", Courier, monospace;
 }
 
 h3 {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 header {
@@ -64,102 +64,139 @@ header {
 }
 
 body {
-    background-color: var(--color-primary);
+  background-color: var(--color-primary);
 }
 
 main ul {
-    display: flex;
-    flex-direction: row;
-    gap: var(--spacing-small);
-    margin: var(--spacing-medium);
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-small);
+  margin: var(--spacing-medium);
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .category-container > li {
-    list-style: none;
+  list-style: none;
 }
 
 .card {
-    width: fit-content;
-    height: fit-content;
-    min-height: 100px;
-    width: 20%;
+  width: fit-content;
+  height: fit-content;
+  min-height: 100px;
+  width: 20%;
 }
 
 .card .container {
-    font-size: large;
-    font-family: 'Cedarville Cursive', cursive;
+  font-size: large;
+  font-family: "Cedarville Cursive", cursive;
 }
 
 .card .container > ul {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .card .container > li {
-    text-align: justify;
+  text-align: justify;
 }
 
 .card .card-category {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: var(--spacing-small);
-    text-shadow: var(--text-shadow);
-    text-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-small);
+  text-shadow: var(--text-shadow);
+  text-align: start;
 }
 
 .card .card-category > span {
-    text-shadow: var(--text-shadow);
+  text-shadow: var(--text-shadow);
+  cursor: pointer;
 }
 
 @keyframes rotate180 {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(180deg);
-    }
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(180deg);
+  }
+}
 
 .card .card-category > span:hover {
-    animation-name: rotate180;
-    animation-duration: 500ms;
+  animation-name: rotate180;
+  animation-duration: 500ms;
 }
 
 .card.optional {
-    background-color: var(--color-card-optional);
+  background-color: var(--color-card-optional);
 }
 
-.card.optional .card-category {
-    background-color: var(--color-card-optional-title);
+.card .card-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.card .card-header form {
+  margin: var(--spacing-small);
+  display: flex;
+  flex-direction: row;
+}
+
+.card .card-header form input {
+  width: 100%;
+  padding: var(--spacing-xsmall);
+  border: 1px solid black;
+  outline: none;
+  font-size: small;
+  border-radius: var(--spacing-small) 0 0 var(--spacing-small);
+}
+
+.card .card-header form .add-button {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 0 var(--spacing-small) var(--spacing-small) 0;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 900;
+  color: white;
+  background-color: black;
+}
+
+.card .card-category {
+  flex-wrap: wrap;
 }
 
 .card .card-category h3 {
-    font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.card.optional .card-header {
+  background-color: var(--color-card-optional-title);
 }
 
 .card.important {
-    background-color: var(--color-card-important);
+  background-color: var(--color-card-important);
 }
 
-.card.important .card-category {
-    background-color: var(--color-card-important-title);
+.card.important .card-header {
+  background-color: var(--color-card-important-title);
 }
 
 .card.urgent {
-    background-color: var(--color-card-urgent);
+  background-color: var(--color-card-urgent);
 }
 
-.card.urgent .card-category {
-    background-color: var(--color-card-urgent-title);
+.card.urgent .card-header {
+  background-color: var(--color-card-urgent-title);
 }
 
 .card.immediate {
-    background-color: var(--color-card-immediate);
+  background-color: var(--color-card-immediate);
 }
 
-.card.immediate .card-category {
-    background-color: var(--color-card-immediate-title);
+.card.immediate .card-header {
+  background-color: var(--color-card-immediate-title);
 }
