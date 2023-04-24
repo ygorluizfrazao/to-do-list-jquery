@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import "button.css";
+@import "card.css";
+
+:root {
+  --color-primary: #eef7c7;
+  --color-secondary: #ecf56a;
+  --color-tertiary: white;
+  --color-over-secondary: black;
+  --color-borders: black;
+  --color-over-primary: black;
+  --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  --color-card-optional: #d1f7c7;
+  --color-card-optional-title: #a6f691;
+
+  --color-card-important: #e7f7c7;
+  --color-card-important-title: #ecf56a;
+
+  --color-card-urgent: #e7f7c7;
+  --color-card-urgent-title: #ecf56a;
+
+  --spacing-xsmall: 4px;
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 32px;
+  --spacing-xlarge: 64px;
+
+  --border-radius: 12px;
+}
+
+@media (prefers-reduced-motion) {
+  * {
+    transition: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 32px;
+    text-shadow: var(--text-shadow);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-medium);
+  padding: var(--spacing-large) var(--spacing-medium);
+  background-color: var(--color-secondary);
+}
+
+body {
+    background-color: var(--color-primary);
+}
+
+main ul {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-small);
+    margin: var(--spacing-medium);
+    flex-wrap: wrap;
+}
+
+main ul li {
+    display: block;
+}
+
+.card {
+    width: fit-content;
+    height: fit-content;
+    min-height: 100px;
+    min-width: 100px;
+}
+
+.card .card-category {
+    background-color: var(--color-secondary);
+}
