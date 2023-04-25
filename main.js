@@ -26,7 +26,16 @@ let inputImmediate;
 let listImmediate;
 
 $(document).ready(() => {
-  todoLists = loadCookie();
+  try {
+    todoLists = loadCookie();
+  } catch (error) {
+    todoLists = {
+      optional: [],
+      important: [],
+      urgent: [],
+      immediate: [],
+    };
+  }
 
   setupOptionalBoard();
   setupImportantBoard();
@@ -250,7 +259,7 @@ function updateBoards() {
 function updateItemStatus(item, content, status) {
   if (status != undefined && status !== null) {
     item.status = status;
-    document.cookie = JSON.stringify(todoLists)
+    document.cookie = JSON.stringify(todoLists);
   }
 
   if (item.status === NOT_DONE) {
