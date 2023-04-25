@@ -1,8 +1,6 @@
 const NOT_DONE = false;
 const DONE = true;
 
-const cookie = JSON.parse(document.cookie);
-
 let todoLists;
 
 let addOptional;
