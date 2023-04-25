@@ -82,6 +82,8 @@ main ul {
 
 .card {
   flex-shrink: 0;
+  max-width: 300px;
+  min-width: 230px;
 }
 
 .card .container {
@@ -89,13 +91,20 @@ main ul {
   font-family: "Cedarville Cursive", cursive;
 }
 
-.card .container > ul {
+.card .container ul {
   display: flex;
   flex-direction: column;
 }
 
-.card .container > li {
+.card .container li {
   text-align: justify;
+  overflow-wrap: normal;
+  width: 100%;
+}
+
+.card .container ul li span {
+    display: inline;
+    overflow-wrap: break-word;
 }
 
 .card .card-category {
@@ -113,21 +122,6 @@ main ul {
   cursor: pointer;
   user-select: none;
 }
-
-/* @keyframes rotate180 {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(30deg);
-  }
-}
-
-.card .card-category > span:hover {
-  animation-name: rotate180;
-  animation-duration: 500ms;
-  animation-fill-mode: forwards;
-} */
 
 .card.optional {
   background-color: var(--color-card-optional);
@@ -201,10 +195,20 @@ main ul {
   background-color: var(--color-card-immediate-title);
 }
 
+
+
 .hidden {
   display: none;
 }
 
 .show {
   display: block;
+}
+
+.not-done {
+    text-decoration: none;
+}
+
+.done {
+    text-decoration: line-through;
 }
